@@ -5,7 +5,15 @@ buildscript {
   }
   dependencies {
     classpath "com.netflix.nebula:nebula-kotlin-plugin:1.2.41"
+    classpath "com.netflix.nebula:nebula-publishing-plugin:7.1.0"
+    classpath "com.netflix.nebula:nebula-release-plugin:6.3.3"
   }
+}
+
+allprojects {
+  apply plugin: "nebula.release"
+
+  group = "io.github.robfletcher"
 }
 
 subprojects {
